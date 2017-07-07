@@ -6,17 +6,10 @@
 cronJob = require('cron').CronJob # cronJobのの読み込み
 
 module.exports = (robot) ->
-  testJob = new cronJob('00 50 10 * * 5', () ->
-    envelope = room: "#shuya_private"
-    robot.send envelope, "Hungry...!!!"
-  )
+ new cronJob('00 30 11 * * 5', () ->
+    send '#shuya_private', "Hungry...."
+  ).start()
 
-  meetingJob = new cronJob('00 5 18 ** 4', () ->
-    envelope = room: "#general"
-    mention = "@channel: "
-    robot.send envelope, mention + "10 minutes later, Meeting Time !!"
-  )
-
-  testJob.start() # cronJobの実行
-  meetingJob.start()
-
+  new cronJob('00 05 10 * * 4', () ->
+    send '#general', "@here 10 minutes later, Meeting Time !!"
+  ).start()
