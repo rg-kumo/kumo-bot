@@ -6,7 +6,7 @@
 cronJob = require('cron').CronJob # cronJobのの読み込み
 
 module.exports = (robot) ->
-  testJob = new cronJob('00 43 10 * * 5', () ->
+  testJob = new cronJob('00 50 10 * * 5', () ->
     envelope = room: "#shuya_private"
     robot.send envelope, "Hungry...!!!"
   )
