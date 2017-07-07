@@ -10,6 +10,6 @@ module.exports = (robot) ->
     send '#shuya_private', "Hungry...."
   ).start()
 
-  new cronJob('00 05 10 * * 4', () ->
-    send '#general', "@here 10 minutes later, Meeting Time !!"
+  new cronJob('00 05 18 * * 4', () ->
+    send '#kumo', "@here 10 minutes later, Meeting Time !!"
   ).start()
