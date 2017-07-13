@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "author": "shuya <shuya@sfc.wide.ad.jp>",
-  "description": "kumobot which named mama",
+  "description": "kumobot",
   "dependencies": {
     "cron": "^1.2.1",
     "hubot": "^2.19.0",
