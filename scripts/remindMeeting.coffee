@@ -6,7 +6,7 @@
 cronJob = require('cron').CronJob # cronJobのの読み込み
 
 module.exports = (robot) ->
- new cronJob('00 40 11 * * 5', () ->
+ new cronJob('00 40 11 * * 4', () ->
     envelope = room: "#kumo"
     mention = "@here "
     robot.send envelope, mention + "You've already written?? https://github.com/rg-kumo/docs/wiki"
