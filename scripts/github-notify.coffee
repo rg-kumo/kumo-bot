@@ -28,12 +28,12 @@ module.exports = (robot) ->
         switch body.pages[0].action
             when 'edited'
                 page_name = body.pages[0].page_name
-                message = "*Edit #{page_name}* \n" + 
+                message = "*Edit #{page_name} *\n" + 
                 message += body.pages[0].html_url
                 return message
             when 'created'
                 page_name = body.pages[0].page_name
-                message = "*Create #{page_name}* \n"
+                message = "*Create #{page_name} *\n"
                 message += body.pages[0].html_url
                 return message
 
