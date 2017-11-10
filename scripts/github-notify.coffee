@@ -27,11 +27,11 @@ module.exports = (robot) ->
     atWiki = (body) ->
         switch body.pages[0].action
             when 'edited'
-                message = "*GitHub Wikiページの編集*\n"
+                message = "*Edit GitHub Wiki Page*\n"
                 message += body.pages[0].html_url
                 return message
             when 'created'
-                message = "*GitHub Wikiページの作成*\n"
+                message = "*Create GitHub Wiki Page*\n"
                 message += body.pages[0].html_url
                 return message
 
