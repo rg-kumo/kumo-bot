@@ -6,14 +6,14 @@
 cronJob = require('cron').CronJob # cronJobのの読み込み
 
 module.exports = (robot) ->
- new cronJob('00 40 11 * * 4', () ->
+ new cronJob('00 40 11 * * 1', () ->
     envelope = room: "#kumo"
     mention = "@here "
     robot.send envelope, mention + "You've already written?? https://github.com/rg-kumo/docs/wiki"
   ).start()
 
-  new cronJob('00 05 18 * * 4', () ->
+  new cronJob('00 50 13 * * 1', () ->
     envelope = room: "#kumo"
     mention = "@channel: "
-    robot.send envelope, mention + "10 minutes later, Meeting Time !!"
+    robot.send envelope, mention + "Meeting starts in 10 minutes!"
   ).start()
