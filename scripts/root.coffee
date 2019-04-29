@@ -3,4 +3,4 @@
 
 module.exports = (robot) ->
     robot.router.get "/", (req, res) ->
-        res.send 'Hi. Kumobot is running!'
+        res.send 'Hi. Kumobot is running! If you have any problems, please contact cat.'
