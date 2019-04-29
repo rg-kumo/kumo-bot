@@ -4,3 +4,7 @@ module.exports = (robot) ->
 
   robot.respond /what are you doing/i, (msg) ->
     msg.send "I will remind meeting time :)"
+
+  robot.respond /sendtokumo (.*)/i, (res) ->
+    msg= res.match[1]
+    robot.messageRoom 'kumo', msg
