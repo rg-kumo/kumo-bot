@@ -20,7 +20,7 @@ module.exports = (robot) ->
         switch event_type
             when 'gollum'
                 message = atWiki req.body
-                #robot.messageRoom 'kumo', message
+                robot.messageRoom 'kumo', message
 
         res.status(200).send 'ok'
 
